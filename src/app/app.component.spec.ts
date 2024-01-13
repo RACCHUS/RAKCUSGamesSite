@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'RAKCUSGamesSite' title`, () => {
+  it(`should have the 'Welcome' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('RAKCUSGamesSite');
+    expect(app.title).toEqual('Welcome');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, RAKCUSGamesSite');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome');
   });
 });
