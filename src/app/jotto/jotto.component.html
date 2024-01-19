@@ -1,0 +1,11 @@
+<div class="jotto-container">
+    <input [ngModel]="currentGuess" (ngModelChange)="currentGuess = $event" placeholder="Enter your guess">
+    <button (click)="guessWord()">Guess</button>
+    <span>&nbsp;</span>
+    <div class="guesses">
+        <div *ngFor="let guess of guessList"> <!-- Add this line -->
+            <p>{{guess.word}} {{guess.matches}}<span>&nbsp;</span></p> <!-- Add this line -->
+    </div> 
+    </div>
+    <p *ngIf="isWordGuessed">Congratulations! You've guessed the word correctly!</p>
+</div>
