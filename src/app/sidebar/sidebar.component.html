@@ -1,0 +1,55 @@
+<div class="main-container">
+    <div class="sidebar">
+        <div class="logo-container">
+          <img src="../assets/images/RAKCUSGamesLogoNoWords.svg" alt="Games Logo" class="logo" (click)="navigateHome()">
+        </div>
+        <div class="sidebar-section">
+          <a href="#" class="sidebar-link" id="MM" [routerLink]="['/mythic-might']">MYTHIC MIGHT</a>
+        </div>
+        <div class="sidebar-section">
+          <a href="#" class="sidebar-link" id="Jotto" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [routerLink]="['/jotto']">JOTTO</a>
+        </div>
+        <div class="sidebar-section">
+          <a href="#" class="sidebar-link" id="About" [routerLink]="['/about']">About Us</a>
+        </div>
+    </div>
+    <div class="logo-box">
+        <button id="play" *ngIf="showPlayButton">Play</button>
+        <div id="word" [class.hover-effect]="isHovering">
+            <span>G</span>
+            <span>u</span>
+            <span>e</span>
+            <span>s</span>
+            <span>s</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>t</span>
+            <span>h</span>
+            <span>e</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>F</span>
+            <span>i</span>
+            <span>v</span>
+            <span>e</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>L</span>
+            <span>e</span>
+            <span>t</span>
+            <span>t</span>
+            <span>e</span>
+            <span>r</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>W</span>
+            <span>o</span>
+            <span>r</span>
+            <span>d</span>
+        </div>
+    </div>
+</div>

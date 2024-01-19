@@ -1,14 +1,14 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, Router, RouterModule } from '@angular/router';
-
+import { RouterOutlet, Router, RouterModule, ActivatedRoute } from '@angular/router';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule],
+  imports: [CommonModule, RouterOutlet, RouterModule, SidebarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 
 export class AppComponent {
@@ -16,20 +16,6 @@ export class AppComponent {
   showPlayButton = false;
   backgroundStyle = '';
 
-  constructor(private router: Router) { }
-
-  onMouseEnter() {
-    this.isHovering = true;
-  }
-
-  onMouseLeave() {
-    this.isHovering = false;
-  }
-
-  onMythicMightClick() {
-    this.backgroundStyle = 'linear-gradient(to right, #2c2d34, #467a5e)';
-    this.showPlayButton = true;
-    this.router.navigate(['/mythic-might']);
-  }
+  constructor(public router: Router, public route: ActivatedRoute) { }
 
 }
